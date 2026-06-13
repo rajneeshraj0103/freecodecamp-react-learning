@@ -35,7 +35,8 @@ This repository contains my React learning journey using the FreeCodeCamp course
 - [x] Components
 - [x] Props
 - [x] Boolean Props
-- [ ] Props
+- [x]Children Props
+- [x]Component Organization
 - [ ] State
 - [ ] Event Handling
 - [ ] Conditional Rendering
@@ -98,6 +99,15 @@ This repository contains my React learning journey using the FreeCodeCamp course
   - large={true}
   - large="true"
 - Learned that missing props become undefined
+
+### Lesson 5 - Passing Props III
+
+- Learned the children prop
+- Passed content between component tags
+- Added height and background color props
+- Created reusable UI components
+- Moved components into separate files
+- Learned component import/export
 
 ## Repository
 
