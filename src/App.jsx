@@ -1,8 +1,20 @@
+const Title = () => {
+  return(
+    <div>
+      Hello World!
+    </div>
+  )
+}
+
+const Description = () => {
+  return <div>this is my first react app</div>;
+};
+
 const App = () => {
   return (
     <div>
-      <h1>Welcome to React</h1>
-      <p>I am learning React from FreeCodeCamp.</p>
+      <Title />
+      <Description />
     </div>
   );
 };
