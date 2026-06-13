@@ -1,20 +1,17 @@
-const Title = () => {
+const Message = (props) =>{
+  const {text, bgColor} = props;
   return(
-    <div>
-      Hello World!
-    </div>
+    <div style={{background:bgColor}}>{text}</div>
   )
 }
 
-const Description = () => {
-  return <div>this is my first react app</div>;
-};
 
 const App = () => {
   return (
     <div>
-      <Title />
-      <Description />
+    <Message text="This is my first prop" bgColor = "lavender" />
+    <Message text="Hi!!!" bgColor = "CornflowerBlue" />
+    <Message text="Bye!!!" bgColor = "Beige" />
     </div>
   );
 };

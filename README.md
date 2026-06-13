@@ -77,6 +77,15 @@ This repository contains my React learning journey using the FreeCodeCamp course
 - Learned React component naming conventions
 - Learned component composition
 
+### Lesson 3 - Passing Props
+
+- Created reusable Message component
+- Passed text using props
+- Passed background color using props
+- Used inline styles with React
+- Reused the same component with different data
+- Learned parent-to-child communication
+
 ## Repository
 
 GitHub: https://github.com/rajneeshraj0103/freecodecamp-react-learning
