@@ -33,6 +33,8 @@ This repository contains my React learning journey using the FreeCodeCamp course
 
 - [x] JSX
 - [x] Components
+- [x] Props
+- [x] Boolean Props
 - [ ] Props
 - [ ] State
 - [ ] Event Handling
@@ -85,6 +87,17 @@ This repository contains my React learning journey using the FreeCodeCamp course
 - Used inline styles with React
 - Reused the same component with different data
 - Learned parent-to-child communication
+
+### Lesson 4 - Passing Props II
+
+- Passed string props
+- Passed boolean props
+- Used props to control component styling
+- Learned conditional rendering using the ternary operator
+- Learned the difference between:
+  - large={true}
+  - large="true"
+- Learned that missing props become undefined
 
 ## Repository
 
