@@ -1,16 +1,65 @@
-# React + Vite
+# FreeCodeCamp React Learning
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains my React learning journey using the FreeCodeCamp course:
 
-Currently, two official plugins are available:
+**React Course for Beginners w/ Tailwind CSS [2025]**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+* React
+* Vite
+* JavaScript
+* Tailwind CSS (upcoming)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Learning Goals
 
-## Expanding the ESLint configuration
+* Learn React fundamentals
+* Understand JSX
+* Build reusable components
+* Work with Props and State
+* Learn Hooks
+* Learn React Router
+* Learn Tailwind CSS
+* Build real-world React projects
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Progress Tracker
+
+### Setup
+
+* [x] React Project Setup
+* [x] GitHub Repository Setup
+
+### React Fundamentals
+
+* [ ] JSX
+* [ ] Components
+* [ ] Props
+* [ ] State
+* [ ] Event Handling
+* [ ] Conditional Rendering
+* [ ] Lists and Keys
+* [ ] Forms
+
+### React Hooks
+
+* [ ] useState
+* [ ] useEffect
+* [ ] Custom Hooks
+
+### Routing
+
+* [ ] React Router
+
+### Styling
+
+* [ ] Tailwind CSS
+
+### Projects
+
+* [ ] Project 1
+* [ ] Project 2
+* [ ] Final Project
+
+## Author
+
+Rajneesh Raj
