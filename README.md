@@ -59,6 +59,7 @@ This repository contains my React learning journey using the FreeCodeCamp course
 - [x] Tailwind Utility Classes
 - [x] Buttons and Hover Effects
 - [x] Dynamic Styling with Props
+- [x] Layouts with Flexbox
 - [ ] Responsive Design
 - [ ] Layouts with Flexbox
 - [ ] Layouts with Grid
@@ -168,6 +169,55 @@ Different styles can be applied based on prop values.
 ```
 
 The same component can render differently depending on the props passed to it.
+
+### Lesson 9 - Flexbox Layouts with Tailwind CSS
+
+- Created a reusable `Cat` component
+- Used Font Awesome icons inside React components
+- Learned the `flex` utility
+- Learned horizontal alignment using:
+  - `justify-center`
+  - `justify-between`
+  - `justify-around`
+
+- Learned vertical alignment using:
+  - `items-center`
+  - `items-end`
+
+- Combined horizontal and vertical alignment utilities
+- Practiced building layouts using Tailwind Flexbox utilities
+
+#### Key Concepts
+
+```jsx
+<div className="flex justify-center">
+```
+
+Centers items horizontally.
+
+```jsx
+<div className="flex items-center">
+```
+
+Centers items vertically.
+
+```jsx
+<div className="flex justify-between">
+```
+
+Places items at opposite ends with space between them.
+
+```jsx
+<div className="flex justify-around">
+```
+
+Distributes equal space around items.
+
+```jsx
+<div className="flex items-end">
+```
+
+Aligns items to the bottom of the container.
 
 ## Repository
 
