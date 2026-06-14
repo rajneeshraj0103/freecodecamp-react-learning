@@ -58,6 +58,7 @@ This repository contains my React learning journey using the FreeCodeCamp course
 - [x] Tailwind CSS Setup
 - [x] Tailwind Utility Classes
 - [x] Buttons and Hover Effects
+- [x] Dynamic Styling with Props
 - [ ] Responsive Design
 - [ ] Layouts with Flexbox
 - [ ] Layouts with Grid
@@ -137,6 +138,36 @@ This repository contains my React learning journey using the FreeCodeCamp course
 - Used hover effects
 - Built multiple styled buttons using utility classes
 - Practiced combining multiple Tailwind classes
+
+### Lesson 8 - Dynamic Component Styling
+
+- Created a reusable `FancyButton` component
+- Used the `children` prop to display button content
+- Used a boolean `large` prop to control styling
+- Applied conditional Tailwind classes
+- Learned template literal syntax for dynamic class names
+- Built reusable UI components with configurable appearance
+- Practiced separating component logic into its own file
+
+#### Key Concept
+
+```jsx
+const largeStyles = large ? "text-3xl rounded-full" : "text-base rounded-md";
+```
+
+Different styles can be applied based on prop values.
+
+```jsx
+<FancyButton large={true}>
+  Click Me
+</FancyButton>
+
+<FancyButton large={false}>
+  Submit
+</FancyButton>
+```
+
+The same component can render differently depending on the props passed to it.
 
 ## Repository
 
