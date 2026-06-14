@@ -9,7 +9,7 @@ This repository contains my React learning journey using the FreeCodeCamp course
 - React
 - Vite
 - JavaScript
-- Tailwind CSS (Upcoming)
+- Tailwind CSS
 
 ## Learning Goals
 
@@ -35,8 +35,8 @@ This repository contains my React learning journey using the FreeCodeCamp course
 - [x] Components
 - [x] Props
 - [x] Boolean Props
-- [x]Children Props
-- [x]Component Organization
+- [x] Children Props
+- [x] Component Organization
 - [ ] State
 - [ ] Event Handling
 - [ ] Conditional Rendering
@@ -55,7 +55,11 @@ This repository contains my React learning journey using the FreeCodeCamp course
 
 ### Styling
 
-- [ ] Tailwind CSS
+- [x] Tailwind CSS Setup
+- [x] Tailwind Utility Classes
+- [ ] Responsive Design
+- [ ] Layouts with Flexbox
+- [ ] Layouts with Grid
 
 ### Projects
 
@@ -96,18 +100,31 @@ This repository contains my React learning journey using the FreeCodeCamp course
 - Used props to control component styling
 - Learned conditional rendering using the ternary operator
 - Learned the difference between:
-  - large={true}
-  - large="true"
-- Learned that missing props become undefined
+  - `large={true}`
+  - `large="true"`
+
+- Learned that missing props become `undefined`
 
 ### Lesson 5 - Passing Props III
 
-- Learned the children prop
+- Learned the `children` prop
 - Passed content between component tags
 - Added height and background color props
 - Created reusable UI components
 - Moved components into separate files
 - Learned component import/export
+
+### Lesson 6 - Tailwind CSS Setup & Utility Classes
+
+- Installed Tailwind CSS v4
+- Configured Tailwind CSS with Vite
+- Imported Tailwind into `index.css`
+- Applied text color utilities
+- Applied background color utilities
+- Applied border utilities
+- Applied font size utilities
+- Learned utility-first CSS styling
+- Verified Tailwind integration inside React components
 
 ## Repository
 
