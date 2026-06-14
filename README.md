@@ -57,6 +57,7 @@ This repository contains my React learning journey using the FreeCodeCamp course
 
 - [x] Tailwind CSS Setup
 - [x] Tailwind Utility Classes
+- [x] Buttons and Hover Effects
 - [ ] Responsive Design
 - [ ] Layouts with Flexbox
 - [ ] Layouts with Grid
@@ -125,6 +126,17 @@ This repository contains my React learning journey using the FreeCodeCamp course
 - Applied font size utilities
 - Learned utility-first CSS styling
 - Verified Tailwind integration inside React components
+
+### Lesson 7 - Tailwind Buttons and Styling
+
+- Applied Tailwind color utilities
+- Applied padding and margin utilities
+- Applied border utilities
+- Applied border radius utilities
+- Applied font size utilities
+- Used hover effects
+- Built multiple styled buttons using utility classes
+- Practiced combining multiple Tailwind classes
 
 ## Repository
 
