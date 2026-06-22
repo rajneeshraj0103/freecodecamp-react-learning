@@ -1,33 +1,34 @@
-import Cat from "./Cat";
+import QuoteBox1 from "./QuoteBox1";
+import QuoteBox2 from "./QuoteBox2";
+import QuoteBox3 from "./QuoteBox3";
+
+
+
+const quote1 = {
+  text: "One of my most productive days was throwing away 1000 lines of code.",
+  author: "Ken Thompson",
+  bio: "Designer of Unix Operating System",
+};
+
+const quote2 = {
+  text: "A ship in port is safe, but that's not what ships are built for.",
+  author: "Admiral Grace Hopper",
+  bio: "Inventor of Compiling Compilers",
+};
+
+const quote3 = {
+  text: "If you optimize everything, you will always be unhappy.",
+  author: "Donald Knuth",
+  bio: "Pioneer of Algorithm Analysis",
+};
 
 const App = () => {
-  return <div>
-    <div className="flex justify-center h-64 p-4 m-4 border-2 border-blue-400">
-      <Cat />
-      <Cat />
-      <Cat />
+  return ( <div className = "flex flex-col items-center">
+      <QuoteBox1 quote = {quote1} />
+      <QuoteBox2 quote = {quote2} />
+      <QuoteBox3 quote = {quote3} />
     </div>
-    <div className="flex justify-between h-64 p-4 m-4 border-2 border-red-400">
-      <Cat />
-      <Cat />
-      <Cat />
-    </div>
-    <div className="flex justify-center items-center h-64 p-4 m-4 border-2 border-green-400">
-      <Cat />
-      <Cat />
-      <Cat />
-    </div>
-    <div className="flex items-end justify-around h-64 p-4 m-4 border-2 border-purple-400">
-      <Cat />
-      <Cat />
-      <Cat />
-    </div>
-    <div className="flex justify-between items-center h-64 p-4 m-4 border-2 border-orange-400">
-      <Cat />
-      <Cat />
-      <Cat />
-    </div>
-  </div>
+  );
 };
 
 export default App;
