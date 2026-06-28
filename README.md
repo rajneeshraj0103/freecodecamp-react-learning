@@ -90,6 +90,7 @@ This repository contains my React learning journey using the FreeCodeCamp course
 * [x] Quote Box Components
 * [x] Google Homepage Layout
 * [x] First Interactive React App (`useState`)
+* [x] Image Carousel
 * [ ] Final React Project
 
 ---
@@ -535,6 +536,139 @@ UI updates automatically
 * The logical AND (`&&`) operator is preferred when rendering something only if a condition is true.
 * React encourages rendering UI from state instead of manually manipulating the DOM.
 * Dynamic styling is commonly implemented by conditionally applying CSS classes based on state.
+
+---
+
+## Lesson 13 - Image Carousel using React State
+
+* Built an image carousel using React.
+* Stored multiple image URLs inside an array.
+* Used `useState` to track the currently displayed image.
+* Displayed images dynamically using the current array index.
+* Implemented Previous and Next navigation buttons.
+* Prevented users from navigating beyond the first and last images.
+* Used conditional rendering to show and hide navigation buttons.
+* Displayed contextual messages on the first and last images.
+* Combined state, event handling, and conditional rendering to build an interactive UI.
+
+### Key Concepts
+
+#### Storing Data in an Array
+
+```jsx
+const IMAGE_URLS = [
+  "...",
+  "...",
+  "...",
+];
+```
+
+React commonly uses arrays to render collections of related data dynamically.
+
+---
+
+#### Rendering Dynamic Content
+
+```jsx
+<img src={IMAGE_URLS[imageIdx]} />
+```
+
+The displayed image changes dynamically based on the current value of `imageIdx`.
+
+---
+
+#### Updating State
+
+```jsx
+setImageIdx(imageIdx + 1);
+```
+
+Moves to the next image.
+
+```jsx
+setImageIdx(imageIdx - 1);
+```
+
+Moves to the previous image.
+
+---
+
+#### Conditional Rendering
+
+```jsx
+{imageIdx > 0 && (
+  <button>Previous</button>
+)}
+```
+
+Shows the **Previous** button only when the current image is **not** the first image.
+
+```jsx
+{imageIdx < IMAGE_URLS.length - 1 && (
+  <button>Next</button>
+)}
+```
+
+Shows the **Next** button only when the current image is **not** the last image.
+
+---
+
+#### Displaying Contextual Messages
+
+```jsx
+{imageIdx === 0 && (
+  <div>This is the first image.</div>
+)}
+```
+
+Displays a message only when the first image is displayed.
+
+```jsx
+{imageIdx === IMAGE_URLS.length - 1 && (
+  <div>This is the last image.</div>
+)}
+```
+
+Displays a message only when the last image is displayed.
+
+---
+
+### React Rendering Flow
+
+```text
+User clicks Previous / Next
+            │
+            ▼
+onClick event fires
+            │
+            ▼
+setImageIdx(...)
+            │
+            ▼
+React updates state
+            │
+            ▼
+Component re-renders
+            │
+            ▼
+New image and UI are displayed
+```
+
+### What I Learned
+
+* React state can be used to navigate through data.
+* Arrays work well with React for displaying collections.
+* UI can be updated dynamically using state values.
+* Conditional rendering improves the user experience by displaying only the relevant UI elements.
+* React automatically re-renders whenever state changes.
+
+### Interview Notes
+
+* `useState` can be used to manage the current item in a collection.
+* Array indexing is commonly used to display dynamic content.
+* Conditional rendering helps build intuitive user interfaces.
+* React components should derive their UI from state instead of manually manipulating the DOM.
+* React re-renders the component whenever the state value changes.
 
 ---
 
