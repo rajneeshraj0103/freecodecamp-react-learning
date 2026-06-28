@@ -48,7 +48,7 @@ This repository contains my React learning journey using the FreeCodeCamp course
 * [x] Component Organization
 * [x] State (useState Basics)
 * [x] Event Handling (onClick)
-* [ ] Conditional Rendering
+* [x] Conditional Rendering
 * [ ] Lists and Keys
 * [ ] Forms
 
@@ -74,6 +74,7 @@ This repository contains my React learning journey using the FreeCodeCamp course
 * [x] Tailwind Utility Classes
 * [x] Buttons and Hover Effects
 * [x] Dynamic Styling with Props
+* [x] Dynamic Styling with State
 * [x] Layouts with Flexbox
 * [x] Header and Footer Layouts
 * [x] Full Height Layout (`h-screen`)
@@ -349,7 +350,7 @@ const [message, setMessage] = useState("hi");
 React returns an array containing:
 
 * the current state value
-* a function used to update that value
+* a setter function used to update that value
 
 Using **array destructuring** allows us to assign those two values to meaningful variable names (`message` and `setMessage`).
 
@@ -427,6 +428,113 @@ Updated message appears on the screen
 * React components automatically re-render when state changes.
 * State should be treated as immutable and updated only through the setter function.
 * Event handlers such as `onClick` are commonly used to trigger state updates.
+
+---
+
+## Lesson 12 - Conditional Rendering and Dynamic Styling
+
+* Learned how to conditionally render UI elements in React.
+* Used boolean state to control what is displayed on the screen.
+* Practiced conditional rendering using the ternary (`? :`) operator.
+* Practiced conditional rendering using the logical AND (`&&`) operator.
+* Dynamically changed Tailwind CSS classes based on component state.
+* Used state toggling to show and hide UI elements.
+* Built multiple widgets demonstrating conditional rendering and dynamic styling techniques.
+
+### Key Concepts
+
+#### Conditional Rendering using the Ternary Operator
+
+```jsx
+{
+  showIcon ? (
+    <i className="fa-solid fa-face-smile"></i>
+  ) : null
+}
+```
+
+* If `showIcon` is `true`, React renders the icon.
+* If `showIcon` is `false`, React renders `null`, meaning nothing is displayed.
+
+---
+
+#### Conditional Rendering using the Logical AND (`&&`) Operator
+
+```jsx
+{
+  showIcon && (
+    <i className="fa-solid fa-thumbs-up"></i>
+  )
+}
+```
+
+* React renders the icon only when `showIcon` is `true`.
+* If `showIcon` is `false`, nothing is rendered.
+* This syntax is shorter and commonly used when there is no alternate UI.
+
+---
+
+#### Dynamic Styling with State
+
+```jsx
+className={`px-4 py-2 text-white rounded-full ${
+  toggleColor ? "bg-orange-500" : "bg-blue-500"
+}`}
+```
+
+React applies different Tailwind CSS classes depending on the current state value.
+
+---
+
+#### Toggling Boolean State
+
+```jsx
+setShowIcon(!showIcon);
+```
+
+The `!` operator reverses the current boolean value.
+
+* `true` becomes `false`
+* `false` becomes `true`
+
+This is commonly used to implement show/hide functionality.
+
+---
+
+### React Rendering Flow
+
+```text
+User clicks button
+        │
+        ▼
+onClick event fires
+        │
+        ▼
+Boolean state changes
+        │
+        ▼
+React re-renders the component
+        │
+        ▼
+UI updates automatically
+```
+
+### What I Learned
+
+* React can render different UI based on state.
+* Boolean state is commonly used to control visibility.
+* The ternary operator is useful when rendering one of two possible outputs.
+* The `&&` operator is useful when rendering something only if a condition is true.
+* State can also be used to dynamically change CSS classes.
+* React automatically updates the UI whenever the state changes.
+
+### Interview Notes
+
+* Conditional rendering is one of the core concepts of React.
+* The ternary operator (`? :`) is used when there are two possible outcomes.
+* The logical AND (`&&`) operator is preferred when rendering something only if a condition is true.
+* React encourages rendering UI from state instead of manually manipulating the DOM.
+* Dynamic styling is commonly implemented by conditionally applying CSS classes based on state.
 
 ---
 
