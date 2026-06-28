@@ -49,6 +49,7 @@ This repository contains my React learning journey using the FreeCodeCamp course
 * [x] State (useState Basics)
 * [x] Event Handling (onClick)
 * [x] Conditional Rendering
+* [x] Component Composition
 * [ ] Lists and Keys
 * [ ] Forms
 
@@ -91,6 +92,7 @@ This repository contains my React learning journey using the FreeCodeCamp course
 * [x] Google Homepage Layout
 * [x] First Interactive React App (`useState`)
 * [x] Image Carousel
+* [x] Cat Carousel (Reusable Components)
 * [ ] Final React Project
 
 ---
@@ -669,6 +671,122 @@ New image and UI are displayed
 * Conditional rendering helps build intuitive user interfaces.
 * React components should derive their UI from state instead of manually manipulating the DOM.
 * React re-renders the component whenever the state value changes.
+
+---
+
+## Lesson 14 - Building a Reusable Cat Carousel
+
+* Built a reusable Cat Carousel application using React.
+* Stored multiple cat objects inside an array.
+* Passed objects to child components using props.
+* Created reusable `CatCard` and `NavButton` components.
+* Used component composition to build the application.
+* Passed event handlers from parent to child components.
+* Controlled component visibility using a boolean prop.
+* Used conditional rendering inside reusable components.
+* Implemented Previous and Next navigation using React state.
+* Displayed dynamic data based on the current array index.
+
+### Key Concepts
+
+#### Passing Objects as Props
+
+```jsx
+<CatCard cat={CATS[catIdx]} />
+```
+
+Passes a complete object from the parent component to the child component.
+
+---
+
+#### Passing Event Handlers
+
+```jsx
+<NavButton
+  onClick={() => setCatIdx(catIdx - 1)}
+/>
+```
+
+Allows the parent component to control what happens when the child button is clicked.
+
+---
+
+#### Passing Boolean Props
+
+```jsx
+<NavButton
+  show={catIdx > 0}
+/>
+```
+
+Controls whether the child component should render itself.
+
+---
+
+#### Conditional Rendering Inside a Component
+
+```jsx
+if (show === false) {
+  return null;
+}
+```
+
+Returns `null` when the component should not be displayed.
+
+---
+
+#### Component Composition
+
+```text
+<App>
+ ├── NavButton
+ ├── CatCard
+ └── NavButton
+```
+
+Large React applications are built by combining multiple reusable components.
+
+---
+
+### React Rendering Flow
+
+```text
+User clicks navigation button
+            │
+            ▼
+onClick handler executes
+            │
+            ▼
+setCatIdx(...)
+            │
+            ▼
+State updates
+            │
+            ▼
+App re-renders
+            │
+            ▼
+CatCard receives a new cat object
+            │
+            ▼
+Updated cat information is displayed
+```
+
+### What I Learned
+
+* Components become more reusable by receiving data through props.
+* Parent components can pass event handlers to child components.
+* Boolean props can control component visibility.
+* React applications are built by composing multiple reusable components.
+* State drives which data is displayed in the UI.
+
+### Interview Notes
+
+* Props allow parent components to pass both data and behavior to child components.
+* Event handlers can be passed as props.
+* Returning `null` prevents a component from rendering.
+* Component composition is a fundamental React design pattern.
+* React applications should derive their UI from state instead of manually manipulating the DOM.
 
 ---
 
