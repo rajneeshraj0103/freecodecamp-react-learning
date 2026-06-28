@@ -46,8 +46,8 @@ This repository contains my React learning journey using the FreeCodeCamp course
 * [x] Boolean Props
 * [x] Children Props
 * [x] Component Organization
-* [ ] State
-* [ ] Event Handling
+* [x] State (useState Basics)
+* [x] Event Handling (onClick)
 * [ ] Conditional Rendering
 * [ ] Lists and Keys
 * [ ] Forms
@@ -56,7 +56,7 @@ This repository contains my React learning journey using the FreeCodeCamp course
 
 ## React Hooks
 
-* [ ] useState
+* [x] useState (Basics)
 * [ ] useEffect
 * [ ] Custom Hooks
 
@@ -88,7 +88,7 @@ This repository contains my React learning journey using the FreeCodeCamp course
 
 * [x] Quote Box Components
 * [x] Google Homepage Layout
-* [ ] Project 3
+* [x] First Interactive React App (`useState`)
 * [ ] Final React Project
 
 ---
@@ -313,6 +313,120 @@ Distributes items across the horizontal axis while keeping them vertically cente
 ```
 
 Uses a Font Awesome icon inside a React component.
+
+---
+
+## Lesson 11 - Introduction to React State and Event Handling with useState
+
+* Learned why React components need state.
+* Imported the `useState` Hook from React.
+* Created a state variable with an initial value.
+* Learned array destructuring while using `useState`.
+* Rendered state values inside JSX.
+* Updated state using the setter function.
+* Learned that calling the setter function automatically re-renders the component.
+* Added click event handlers using `onClick`.
+* Built the first interactive React application.
+
+### Key Concepts
+
+#### Importing the Hook
+
+```jsx
+import { useState } from "react";
+```
+
+Imports the `useState` Hook from React.
+
+---
+
+#### Creating State
+
+```jsx
+const [message, setMessage] = useState("hi");
+```
+
+React returns an array containing:
+
+* the current state value
+* a function used to update that value
+
+Using **array destructuring** allows us to assign those two values to meaningful variable names (`message` and `setMessage`).
+
+* `message` stores the current state value.
+* `setMessage` updates the state.
+* `"hi"` is the initial state.
+
+---
+
+#### Rendering State
+
+```jsx
+<div>{message}</div>
+```
+
+Displays the current state value inside the UI.
+
+---
+
+#### Updating State
+
+```jsx
+setMessage("bye!");
+```
+
+Updates the state value and schedules the component to re-render.
+
+Always use the setter function returned by `useState` to update state instead of modifying the state variable directly.
+
+---
+
+#### Event Handling
+
+```jsx
+<button onClick={() => setMessage("bye!")}>
+```
+
+Executes the function whenever the button is clicked.
+
+---
+
+#### React Rendering Flow
+
+```
+User clicks button
+        │
+        ▼
+onClick event fires
+        │
+        ▼
+setMessage(...)
+        │
+        ▼
+React updates state
+        │
+        ▼
+Component re-renders
+        │
+        ▼
+Updated message appears on the screen
+```
+
+### What I Learned
+
+* State allows React components to store changing data.
+* Updating state should always be done using the setter function.
+* State should never be updated by directly modifying the state variable.
+* React automatically updates the UI whenever state changes.
+* Event handlers make React applications interactive.
+* JSX always displays the latest state value after a re-render.
+
+### Interview Notes
+
+* `useState` returns an array containing the current state value and a setter function.
+* React components automatically re-render when state changes.
+* State should be treated as immutable and updated only through the setter function.
+* Event handlers such as `onClick` are commonly used to trigger state updates.
 
 ---
 
